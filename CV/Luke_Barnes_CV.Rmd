@@ -1,0 +1,338 @@
+---
+name: Luke
+surname: Barnes
+position: "Graduate Student"
+address: "22 Wynona Street, Fort Smith, Arkansas"
+pronouns: He/Him
+phone: (479)353-8597
+email: "lb244@uark.edu"
+github: lukeblaster9
+date: "`r format(Sys.time(), '%B %Y')`"
+output: vitae::hyndman
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+```
+
+
+# Education
+
+```{r}
+library(tibble)
+library(vitae)
+
+tribble(
+  ~Degree, ~Year, ~Institution,
+  "**MS in Statistics and Analytics**", "Expected May 2027", "- Univ. of Arkansas",
+  "**BA in Biology**", "May 2024", "- Univ. of Arkansas – Fort Smith",
+  "**AA With Distinction**", "Dec 2024", "- Univ. of Arkansas – Fort Smith"
+) %>%
+  detailed_entries(Degree, Year, Institution)
+```
+
+# Research Experience
+
+```{r}
+library(tibble)
+library(vitae)
+
+# Research Experience
+research <- tribble(
+  ~Position, ~Dates, ~Organization, ~Description,
+  
+  "Master’s Student in Douglas Lab", "August 2025 - Present",
+  "Drs. Michael and Marlis Douglas, University of Arkansas, Fulbright College of Arts and Sciences, Biological Sciences",
+  paste(
+    "**Forecast Performance of Models of Varying Complexity Applied to Cartilaginous Fish Landings Data**\n",
+    "- Obtained and wrangled fisheries landings data of cartilaginous fish from Ministry of Primary Industries (New Zealand governmental entity)\n",
+    "- Replicated the procedures detailed in a meta-analysis of forecast performance of models of varying complexity applied to ecological data\n",
+    "- Wrote a manuscript describing methods, analysis, and results; currently undergoing initial edits before submission\n\n",
+    
+    "**Model Selection Analysis and Forecasts of Spiny Dogfish in South Pacific Ocean**\n",
+    "- Continued the first project\n",
+    "- Performed deeper analysis on why the 'best' model provides best forecasts for Spiny Dogfish\n",
+    "- Analyzed covariates that may offer insights\n",
+    "- Presented forecasts to guide management of the species\n",
+    "- Manuscript not yet begun; plan to begin this semester\n\n",
+    
+    "**Relationship Between Young-of-Year Class Strength and Reservoir Water Levels**\n",
+    "- Collaboration with Arkansas Game and Fish Commission\n",
+    "- Currently performing analyses to determine the relationship\n",
+    "- Plans to develop a manuscript after analyses are completed"
+  )
+  ,
+  
+  "NSF RaMP Mentee/Jones Center Technician", "May 2024 – August 2025",
+  "Dr. David Mason; Lisa Giencke, The Jones Center at Ichauway",
+  paste(
+    "- Designed an experiment to develop a germination protocol for imperiled Lythrum curtissii\n",
+    "- Developed a TZ testing protocol for viability tests\n",
+    "- Performed a time-to-event analysis to determine optimal germination treatments\n",
+    "- Designed and presented two posters and one oral presentation\n",
+    "- Wrote a manuscript describing the experiment; currently undergoing final edits before submission"
+  )
+  ,
+  
+  "Research Associate", "August 2022 - May 2024",
+  "Dr. Ragupathy Kannan, University of Arkansas – Fort Smith, College of Arts and Sciences, Biology Department",
+  paste(
+    "- Collected and organized data for two research projects\n",
+    "- Assisted in data analysis, graphic design of figures, and writing of two research papers\n",
+    "- Designed and presented one poster and an oral presentation for one of two research projects"
+  )
+)
+
+# Render the section with bullets and bold project titles
+detailed_entries(
+  research,
+  Position,
+  Dates,
+  Organization,
+  Description
+)
+```
+
+# Publications
+
+```{r}
+library(dplyr)
+knitr::write_bib(c("vitae", "tibble"), "packages.bib")
+
+bibliography_entries("C:/Users/lukeb/Downloads/My_Publications.bib") %>%
+  arrange(desc(author$family), issued)
+```
+
+# Presentations
+
+```{r}
+library(tibble)
+library(dplyr)
+library(vitae)
+
+tribble(
+  ~Year, ~Event, ~Presentation, ~Type,
+  2026, "Arkansas American Fisheries Society Meeting", 
+    "Barnes, Luke & Perez, Logan. “Cartilaginous Fisheries: The Wide Net of Forecast Model Selection” AR AFS Meeting,11 February 2026, Holiday Inn, Russellville, Arkansas.",
+    "Poster Session",
+  2025, "Center for Plant Conservation National Meeting", 
+    "Barnes, Luke. “Germination Requirements of Lythrum curtissii” CPC National Meeting, 8 May 2025, Missouri Botanical Garden, St. Louis, Missouri.",
+    "Poster Session",
+  2025, "The Jones Center at Ichauway Research Symposium", 
+    "Barnes, Luke. “A Preliminary Germination Protocol for the Imperiled Lythrum curtissii” The Jones Center at Ichauway Research Symposium, 21 April 2025, The Jones Center at Ichauway, Newton, Georgia.",
+    "Poster Session",
+  2024, "Georgia Plant Conservation Alliance", 
+    "Barnes, Luke. “Germination Requirements of Rare Plants in Southeast Georgia” GPCA, 5 November 2024, State Botanical Garden of Georgia, Athens, Georgia.",
+    "Conference Presentation",
+  2024, "Southeastern Partners in Plant Conservation", 
+    "Barnes, Luke. “Germination Requirements of Rare Plants in Southeast Georgia” SePPCon, 17 October 2024, Atlanta Botanical Garden, Atlanta, Georgia.",
+    "Poster Session",
+  2023, "INBRE", 
+    "Barnes, Luke. “Least Flycatchers Under Reported in Fall Migration in Arkansas—A Citizen Science Conundrum.” INBRE, 4 November 2023, Hillside Auditorium and Physics Building, Fayetteville, Arkansas.",
+    "Poster Session",
+  2023, "Fort Smith Public Library", 
+    "Barnes, Luke. “Biodiversity 101: How to Create a Biodiverse Backyard!” Fort Smith Public Library, 12 June 2023, Fort Smith Public Library, Fort Smith, Arkansas.",
+    "Guest Speaker",
+  2023, "University of Arkansas – Fort Smith Research Symposium", 
+    "Barnes, Luke. “Least Flycatchers Under Reported in Fall Migration in Arkansas—A Citizen Science Conundrum.” UAFS Research Symposium, 7 April 2023, UAFS Library, Fort Smith, Arkansas.",
+    "Conference Presentation",
+  2023, "Journal of the Arkansas Academy of Sciences", 
+    "Barnes, Luke. “Least Flycatchers Under Reported in Fall Migration in Arkansas—A Citizen Science Conundrum.” JAAS, 1 April 2023, Math and Science Building, Pine Bluff, Arkansas.",
+    "Conference Presentation"
+) %>%
+  brief_entries(
+    glue::glue("{Presentation}"),
+    Year,
+    Type
+  )
+
+```
+
+# Honors and Awards
+
+```{r}
+library(tibble)
+library(vitae)
+library(glue)
+
+# Honors and Awards
+honors <- tribble(
+  ~Year, ~Award, ~Institution, ~Amount,
+  2021, "STEM Prestigious Scholarship", "University of Arkansas – Fort Smith", "$27,000",
+  2021, "Arkansas Scholar", "State of Arkansas", "$2,000",
+  2026, "Graduate School & International Education Travel Grant", "University of Arkansas", "$1,000",
+  2023, "2nd place UAFS Annual Essay Competition", "University of Arkansas – Fort Smith", "$250",
+  2021, "Chancellor’s List", "University of Arkansas – Fort Smith", NA,
+  2021, "Dean’s List", "University of Arkansas – Fort Smith", NA,
+  2023, "Student Research Award", "University of Arkansas – Fort Smith, Biology Department", NA
+) %>%
+  # Combine award name, institution, and amount for display
+  mutate(Display = ifelse(is.na(Amount),
+                          glue("{Award}, {Institution}"),
+                          glue("{Award}, {Institution}, {Amount}")))
+
+# Render the honors/awards
+brief_entries(honors, Display, Year)
+
+```
+
+# Professional Experience
+
+```{r}
+library(tibble)
+library(vitae)
+library(glue)
+
+# Professional Experience — reformatted for proper wrapping
+professional <- tribble(
+  ~Position, ~Dates, ~Organization, ~Description,
+  
+  "**National Science Foundation RaMP (Woods to Water)**", "May 2024 – May 2025",
+  "NSF RaMP",
+  paste(
+    "- Developed a personal research project on seed germination for Lythrum curtissii"
+  ),
+  
+  "**University of Alabama**", "May 2024 – May 2025",
+  "University of Alabama",
+  paste(
+    "- Worked with UA professors to develop a personal project\n",
+    "- Received weekly career development trainings\n",
+    "- Spent time working in a UA lab under a professor\n",
+    "- Assisted a PhD with Johnson Grass genetics: labeling vials and greenhouse work"
+  ),
+  
+  "**The Jones Center at Ichauway**", "Jun 2024 – Aug 2025",
+  "Jones Center at Ichauway",
+  paste(
+    "- Plant Ecology Field Technician\n",
+    "- Scouted rare plants for Seeds of Success and the Jones Center\n",
+    "- Identified new and monitored known locations for Jones Center, GA DNR, FL DNR\n",
+    "- Performed germination and TZ tests on various plants\n",
+    "- Collected and prepared herbarium specimens\n",
+    "- Collected rare seeds for GA DNR, FL Plant Rescue, and Jones Center seedbank\n",
+    "- Processed seeds: cleaning, labeling, imaging, vacuum sealing\n",
+    "- Developed R pipeline for germination data analysis\n",
+    "- Programmed and maintained game cameras for seed trap field sites\n",
+    "- Repaired and set seed traps/cameras to monitor plant-animal interactions\n",
+    "- Processed SD cards and uploaded camera/ARU data\n",
+    "- Sorted images by species (mostly birds)\n",
+    "- Compiled lists of most common birds and fruiting plants\n",
+    "- Created ID pamphlets for quick field identification\n",
+    "- Regularly cleaned vehicles"
+  ),
+  
+  "**National Ecological Observatory Network**", "Dec 2024 – Apr 2025",
+  "NEON",
+  paste(
+    "- Field technician\n",
+    "- Cleaned tower equipment and maintained surrounding areas\n",
+    "- Maintained vehicles and conducted inspections\n",
+    "- Measured discharge at wadable streams\n",
+    "- Collected surface and groundwater chemistry samples\n",
+    "- Analyzed and sorted ground litter for biomass\n",
+    "- Filtered/processed soil for root biomass and sorted roots by size\n",
+    "- Conducted phenological surveys for plant phenology\n",
+    "- Maintained and set ground beetle traps; analyzed contents\n",
+    "- Set Sherman traps for small mammals\n",
+    "- Set CO2 light traps for mosquito collection\n",
+    "- Conducted tick surveys using drag cloths"
+  )
+)
+
+# Render section
+detailed_entries(
+  professional,
+  Position,
+  Dates,
+  Organization,
+  Description
+)
+```
+
+# Skills and Certifications
+
+* ACF Freshwater Mussel Certification – August 2024; certified in shell identification in field and lab
+* Adept in R
+* Adept at performing TZ tests
+* Proficient in aquatic field sampling techniques (kick-netting, seining, snorkeling)
+* Proficient in dichotomous key use
+* Proficient in Field Maps and Survey123
+
+# Professional Memberships
+
+```{r}
+library(tibble)
+library(vitae)
+library(glue)
+
+tribble(
+  ~Organization, ~Dates,
+  "Arkansas Chapter of the American Fisheries Society", "February 2026 - Present",
+  "American Society of Ichthyologists and Herpetologists", "October 2023 - Present"
+) %>%
+  brief_entries(
+    glue("{Organization}"),
+    Dates
+  )
+```
+
+# Community Involvement
+
+```{r}
+library(tibble)
+library(vitae)
+
+community <- tribble(
+  ~Position, ~Dates, ~Organization, ~Description,
+  
+   "Assistance for Elderly", "2019 – Present",
+  "Friend",
+  paste(
+    "- General maintenance of yards.\n",
+    "- Help with chores around house.\n",
+    "- Assistance moving furniture.\n",
+    "- Assistance setting up decorations for holidays.\n",
+    "- Rides to appointments or events."
+  ),
+  
+  "UAFS Student Veteran’s Organization", "2023 – 2024",
+  "University of Arkansas – Fort Smith",
+  "- Assisted in preparing and cooking food for events.",
+  
+  "Helping Hands", "2016 – 2020",
+  "Grand Avenue Baptist Church",
+  paste(
+    "- Packed boxes of food and distributed to those in need.\n",
+    "- Delivered furniture."
+  ),
+  
+  "Habitat for Humanity", "2018 – 2019",
+  "Habitat for Humanity",
+  paste(
+    "- Built window frames.\n",
+    "- Insulated house."
+  ),
+  
+  "Sparks Hospital Volunteen Program", "June 2018 - August 2018",
+  "Sparks Hospital",
+  paste(
+    "- Sanitized stalls.\n",
+    "- Sanitized and made beds.\n",
+    "- Wheeled patients to vehicles."
+  ),
+  
+  "Ramsey Service Squad", "2017 – 2018",
+  "Ramsey Junior High",
+  paste(
+    "- Held a turkey donation event for Thanksgiving.\n",
+    "- Built wreaths for graves of veterans in honor of Veteran’s Day.\n",
+    "- Placed wreaths on graves of veterans for Veteran’s Day."
+  )
+)
+
+# Render the section
+detailed_entries(community, Position, Dates, Organization, Description)
+```
+
