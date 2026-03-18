@@ -1,0 +1,249 @@
+Luke Barnes — Curriculum Vitae
+================
+
+**Luke Barnes**  
+22 Wynona Street, Fort Smith, Arkansas  
+(479) 353-8597 • <lukebarnes02@gmail.com>
+
+------------------------------------------------------------------------
+
+## EDUCATION
+
+**MS in Statistics and Analytics** — University of Arkansas  
+Expected Graduation: May 15, 2027
+
+**BA in Biology, cum laude** — University of Arkansas – Fort Smith  
+May 10, 2024
+
+**AA With Distinction** — University of Arkansas – Fort Smith  
+December 15, 2024
+
+------------------------------------------------------------------------
+
+## RESEARCH EXPERIENCE
+
+### Master’s Student — Douglas Lab
+
+*University of Arkansas, Fulbright College of Arts and Sciences*  
+Drs. Michael and Marlis Douglas  
+August 2025 – Present
+
+**Forecast Performance of Models of Varying Complexity Applied to
+Cartilaginous Fish Landings Data**
+
+- Obtained and wrangled fisheries landings data of cartilaginous fish
+  from New Zealand Ministry of Primary Industries  
+- Replicated procedures from a meta-analysis of forecast performance
+  across model complexities  
+- Wrote manuscript comparing results to the original meta-analysis
+  (currently under initial edits)
+
+**Model Selection Analysis and Forecasts of Spiny Dogfish in South
+Pacific Ocean**
+
+- Extension of previous project  
+- Analyzed why the selected “best” model produces superior forecasts  
+- Evaluated covariates for explanatory insight  
+- Producing management-relevant forecasts  
+- Manuscript planned for this semester
+
+**Relationship Between Young-of-Year Class Strength and Reservoir Water
+Levels**
+
+- Collaboration with Arkansas Game and Fish Commission  
+- Statistical analysis of environmental drivers of recruitment  
+- Manuscript planned following completion
+
+------------------------------------------------------------------------
+
+### NSF RaMP Mentee / Jones Center Technician
+
+*The Jones Center at Ichauway*  
+Dr. David Mason; Lisa Giencke  
+May 2024 – August 2025
+
+- Designed germination protocol for imperiled *Lythrum curtissii*  
+- Developed tetrazolium (TZ) viability testing protocol  
+- Conducted time-to-event analyses of germination treatments  
+- Presented two posters and one oral presentation  
+- Authored manuscript (under final edits)
+
+------------------------------------------------------------------------
+
+### Research Associate
+
+*University of Arkansas – Fort Smith, Biology Department*  
+Dr. Ragupathy Kannan  
+August 2022 – May 2024
+
+- Collected and organized research data  
+- Assisted in data analysis, figure design, and manuscript preparation  
+- Presented poster and oral presentation
+
+------------------------------------------------------------------------
+
+## PUBLICATIONS
+
+### Peer-Reviewed
+
+- Barnes L, JL Jackson, R Kannan. 2024. *Least Flycatchers Under
+  Reported in Fall Migration in Arkansas—A Citizen Science Conundrum.*
+  Journal of the Arkansas Academy of Science, Vol. 77.  
+- Baker K, L Barnes, S Rana, JL Jackson, R Kannan. 2024. *Citizen
+  Science: Role of iNaturalist in Biodiversity Documentation and
+  Education in Arkansas.* Journal of the Arkansas Academy of Science,
+  Vol. 77.
+
+### In Progress
+
+- Barnes L., L Giencke, D Mason. 2026. *Alternating Temperature Regime
+  Enhances Germination Success for the Imperiled Lythrum curtissii.*  
+- Perez L., L Barnes, E Richardson, W O’Campo, ME Douglas, MR Douglas, X
+  Zhang. 2026. *Forecast Accuracy of Autoregressive Time Series and
+  Non-Linear Models Applied to South Pacific Cartilaginous Fish.*
+
+------------------------------------------------------------------------
+
+## PRESENTATIONS
+
+**Arkansas American Fisheries Society Meeting** — Russellville, AR (Feb
+2026)  
+Poster: *Cartilaginous Fisheries: The Wide Net of Forecast Model
+Selection*
+
+**Center for Plant Conservation National Meeting** — St. Louis, MO (May
+2025)  
+Poster: *Germination Requirements of Lythrum curtissii*
+
+**Jones Center Research Symposium** — Newton, GA (Apr 2025)  
+Poster: *Preliminary Germination Protocol for Lythrum curtissii*
+
+**Georgia Plant Conservation Alliance** — Athens, GA (Nov 2024)  
+Conference Presentation
+
+**Southeastern Partners in Plant Conservation** — Atlanta, GA (Oct
+2024)  
+Poster Session
+
+**INBRE** — Fayetteville, AR (Nov 2023)  
+Poster
+
+**Fort Smith Public Library** — Fort Smith, AR (Jun 2023)  
+Guest Speaker
+
+**UAFS Research Symposium** — Fort Smith, AR (Apr 2023)  
+Conference Presentation
+
+**Journal of the Arkansas Academy of Sciences Meeting** — Pine Bluff, AR
+(Apr 2023)  
+Conference Presentation
+
+------------------------------------------------------------------------
+
+## HONORS AND AWARDS
+
+- STEM Prestigious Scholarship — \$27,000 (2021–2024)  
+- Arkansas Scholar — \$2,000 (2021–2023)  
+- Graduate School Travel Grant — \$1,000 (2026)  
+- 2nd Place UAFS Annual Essay Competition — \$250 (2023)  
+- Chancellor’s List — Multiple semesters (2021–2024)  
+- Dean’s List — Multiple semesters (2021–2023)  
+- Student Research Award — UAFS Biology Department (2023)
+
+------------------------------------------------------------------------
+
+## PROFESSIONAL EXPERIENCE
+
+### University of Arkansas — Teaching Assistant
+
+August 2025 – Present
+
+- TA for Principles of Biology and Biology of Global Change  
+- Taught laboratories and seminars  
+- Led study sessions and created supplemental materials
+
+------------------------------------------------------------------------
+
+### NSF RaMP (Woods to Water)
+
+May 2024 – May 2025
+
+- Conducted independent research on germination protocols
+
+------------------------------------------------------------------------
+
+### University of Alabama Research Program
+
+May 2024 – May 2025
+
+- Worked with faculty on research development  
+- Participated in career training  
+- Assisted PhD project on Johnson grass genetics
+
+------------------------------------------------------------------------
+
+### Jones Center at Ichauway — Plant Ecology Field Technician
+
+June 2024 – Aug 2025 (multiple terms)
+
+- Rare plant surveys and monitoring  
+- Seed collection and banking  
+- Germination and TZ testing  
+- Herbarium specimen preparation  
+- R pipeline development for germination data analysis  
+- Camera trap deployment and data processing  
+- Species identification and ecological monitoring
+
+------------------------------------------------------------------------
+
+### National Ecological Observatory Network — Field Technician
+
+Dec 2024 – Apr 2025
+
+- Stream discharge measurements  
+- Water chemistry sampling  
+- Soil and litter biomass analysis  
+- Phenological surveys  
+- Small mammal, insect, and tick sampling
+
+------------------------------------------------------------------------
+
+## SKILLS AND CERTIFICATIONS
+
+- ACF Freshwater Mussel Certification (2024)  
+- Advanced R programming  
+- TZ viability testing  
+- Aquatic field sampling techniques  
+- Dichotomous key identification  
+- Field Maps and Survey123  
+- Python  
+- SPSS
+
+------------------------------------------------------------------------
+
+## PROFESSIONAL MEMBERSHIPS
+
+- Arkansas Chapter, American Fisheries Society (2026–Present)  
+- American Society of Ichthyologists and Herpetologists (2023–Present)
+
+------------------------------------------------------------------------
+
+## COMMUNITY INVOLVEMENT
+
+**UAFS Student Veteran’s Organization (2023–2024)**  
+- Prepared food for events
+
+**Assistance for Elderly (2019–Present)**  
+- Yard work, chores, transportation, household assistance
+
+**Helping Hands (2016–2020)**  
+- Food distribution and furniture delivery
+
+**Habitat for Humanity (2018–2019)**  
+- Construction assistance
+
+**Sparks Hospital Volunteen Program (2018)**  
+- Patient assistance and sanitation
+
+**Ramsey Service Squad (2017–2018)**  
+- Veteran support events and community service
