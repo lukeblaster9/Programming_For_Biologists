@@ -17,33 +17,46 @@ def get_args():
     # if 'store_true', this means assign 'True' if the optional argument is specified
     # on the command line, so the default for store_true is actually false
     parser.add_argument("-v", "--verbose", help="Print verbose output", action='store_true')
-    # parse the arguments
+    # parse the arguments and return in two steps
     args = parser.parse_args()
+    return args
+
+    #or, parse the argument and return in one step
+    #return parser.parse_args()
+
+
 
 ###------ function to calculate the Fibonacci number
 def fib():
     #initialize two integers
     a,b = 0,1
-    for i in range(int(args.position)):
+    for i in range(int(beyonce.position)):
         a,b = b, a+b
 
     fibonacci_number = a
+    return fibonacci_number
+
 
 ###------ function to print the output
-def print_output():
-    if args.verbose:
-        print(f"The Fibonacci number for {args.position} is {fibonacci_number}.")
+def print_output(output):
+    if beyonce.verbose:
+        print(f"The Fibonacci number for {beyonce.position} is {output}.")
     else:
-        print(fibonacci_number)
+        print(output)
 
 
 ###------ define the main() function
 def main():
+    fibnum = fib()
+    print_output(fibnum)
+
+###------ calling get_args() happens out here on its own
+beyonce = get_args()
 
 
-    # set the environment for this script
-    # is this main (i.e., a standalone Python script), or
-    # is this a Python module being called by another script
-    if __name__ == '__main__':
-        main()
+# set the environment for this script
+# is this main (i.e., a standalone Python script), or
+# is this a Python module being called by another script
+if __name__ == '__main__':
+    main()
 
