@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+genome=open('covid_genome.txt', 'w')
+
 import argparse
 
 ##----------------------accept and parse command line arguments
@@ -16,6 +18,7 @@ args = parser.parse_args()
 
 # open the file
 file_path=file_path="../Data/covid_genome/"
+genome_sequence=""
 #Fasta = open(file_path+str(args.Fasta_name), "r")
 #GFF= open(file_path+str(args.GFF_name), "r")
 # we created a variable ('genome') when we opened the file: what is it?
@@ -31,18 +34,26 @@ with open(file_path+str(args.Fasta_name), "r") as Fasta:
 
         # strip the line breaks
         line = line.strip()
-        genome_sequence=line
+        genome_sequence +=line
         
 with open(file_path+str(args.GFF_name), "r") as GFF:
     #read the file line by line
     #header=next(GFF)
+    begin=[]
+    end=[]
+    num_ID=[]
     for line in GFF:
-        #print just to make sure we're reading the file okay
-        # print(line, end="")
+        columns = line.strip().split('\t')
+        if len(columns) >= 9:
+            begin_start = int(columns[3])
+            begin.append(begin_start)
+            end_start = int(columns[4])
+            end.append(end_start)
+            num_ID_start = columns[8]
+            num_ID.append(num_ID_start.split("ID=")[1].split(":")[0])
 
-        # strip the line breaks
-        line = line.strip()
-        print(line)
-      
+with open("../Data/covid_genome/covid_genome.fasta", "w") as covid_genome:
+    for i in range(len(begin)):
+        print(num_ID[i], file=covid_genome)
+        print(genome_sequence[begin[i]:end[i]], file=covid_genome)
 
-        
