@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-genome=open('covid_genome.fasta', 'w')
+genome=open('covid_genome_checker.fasta', 'w')
 
 import argparse
 import csv
@@ -51,8 +51,7 @@ with open(file_path+str(args.GFF_name), "r") as GFF:
             num_ID_start = columns[8]
             num_ID.append(num_ID_start.split("ID=")[1].split(";")[0].split(":")[0])
 
-with open("../Data/covid_genome/covid_genome.fasta", "w") as covid_genome:
+with open("../Data/covid_genome/covid_genome_checker.fasta", "w") as covid_genome:
     for i in range(len(begin)):
         print(num_ID[i], file=covid_genome)
-        print(genome_sequence[begin[i]-1:end[i]], file=covid_genome)
-
+        print(len(genome_sequence[begin[i]-1:end[i]]) == ((end[i]-begin[i])+1), file=covid_genome)
