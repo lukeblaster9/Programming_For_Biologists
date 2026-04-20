@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
-genome=open('covid_genome.txt', 'w')
+genome=open('covid_genome.fasta', 'w')
 
 import argparse
-
+import csv
 ##----------------------accept and parse command line arguments
 # create an argument parser object
 parser = argparse.ArgumentParser(description="This script reads in Fasta and GFF files")
@@ -21,6 +21,8 @@ file_path=file_path="../Data/covid_genome/"
 genome_sequence=""
 
 with open(file_path+str(args.Fasta_name), "r") as Fasta:
+    #read as csv
+    reader = csv.reader(Fasta)
     #read the file line by line
     header=next(Fasta)
     for line in Fasta:
@@ -32,6 +34,8 @@ with open(file_path+str(args.Fasta_name), "r") as Fasta:
         genome_sequence +=line
         
 with open(file_path+str(args.GFF_name), "r") as GFF:
+    #read as csv
+    reader = csv.reader(GFF)
     #read the file line by line
     #header=next(GFF)
     begin=[]
